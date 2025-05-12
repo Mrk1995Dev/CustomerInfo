@@ -1,7 +1,8 @@
-﻿1 - ابتدا اسکریپت دیتابیس را اجرا کنید - بعد از اجرای اسکریپت جداول به همراه دیتاهای تستی مربوطه ایمپورت خواهد  شد.
+1 - ابتدا از برنچ Develop کلون بگیرید.
 
-2 - تغییری در appsettings.Development.json ایجاد نکنید به صورت دیفالت دیتابیس در محیط لوکال می باشد.
+2 -بعد از کلون گرفتن و Build برنامه  دستور Update-DataBase را اجرا کنید یا میتوانید از دستور Script-Migartion برای اعمال تنظیمات مایگریشن به صورت مستقیم بر روی دیتابیس استفاده کنید. ( در Package Manager Console لازم است که حتما Default Project بر روی لایه Persistence باشد.
 
-3 - Set As StartUp Project را بر روی Adminpanel.Endpoint قرار بدهید - swagger اجرا خواهد شد.
+3 - تغییری در appsettings.Development.json ایجاد نکنید به صورت دیفالت دیتابیس در محیط لوکال می باشد.
 
-4- فایل اسکریپت دیتابیس در ایمیل ضمیمه شده است.
+4 - Set As StartUp Project را بر روی Adminpanel.Endpoint قرار بدهید - swagger اجرا خواهد شد.
+
