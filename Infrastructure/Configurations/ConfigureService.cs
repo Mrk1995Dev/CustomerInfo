@@ -1,5 +1,4 @@
 ﻿using ApplicationService;
-using ApplicationService.Location.Contract;
 using ApplicationService.User.Contract;
 using ApplicationService.User.Implementation;
 using Microsoft.EntityFrameworkCore;
@@ -32,7 +31,6 @@ namespace Infrastructure.Configurations
         public static IServiceCollection AddBuissinessConfigService(this IServiceCollection services, IConfiguration configuration)
         {
             services.AddTransient<ICustomerManagmentService, CustomerManagmentService>();
-            services.AddTransient<ICityService, CityService>();
             return services;
         }
     }
