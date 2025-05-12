@@ -3,3 +3,5 @@
 2 - تغییری در appsettings.Development.json ایجاد نکنید به صورت دیفالت دیتابیس در محیط لوکال می باشد.
 
 3 - Set As StartUp Project را بر روی Adminpanel.Endpoint قرار بدهید - swagger اجرا خواهد شد.
+
+4- فایل اسکریپت دیتابیس در ایمیل ضمیمه شده است.
