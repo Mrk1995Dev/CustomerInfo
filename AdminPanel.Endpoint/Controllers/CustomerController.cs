@@ -1,5 +1,6 @@
 ﻿using ApplicationService.User.Contract;
 using ApplicationService.User.Dtos;
+using ApplicationService.User.Implementation;
 using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Mvc;
 
@@ -54,7 +55,7 @@ namespace AdminPanel.Endpoint.Controllers
             return NotFound(data);
         }
 
-        [HttpGet("export")]
+        [HttpGet("report")]
         public async Task<IActionResult> ExportCustomerInfo()
         {
             var data = await customerManagmentService.ExportCustomerInfoAsync();
