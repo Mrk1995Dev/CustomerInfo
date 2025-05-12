@@ -12,8 +12,8 @@ using Persistence.Context;
 namespace Persistence.Migrations
 {
     [DbContext(typeof(DataBaseContext))]
-    [Migration("20250512061625_initial-City-Value")]
-    partial class initialCityValue
+    [Migration("20250512063211_initial-Entities")]
+    partial class initialEntities
     {
         /// <inheritdoc />
         protected override void BuildTargetModel(ModelBuilder modelBuilder)
@@ -39,7 +39,7 @@ namespace Persistence.Migrations
                     b.Property<DateTime>("InsertTime")
                         .ValueGeneratedOnAdd()
                         .HasColumnType("datetime2")
-                        .HasDefaultValue(new DateTime(2025, 5, 12, 9, 46, 25, 597, DateTimeKind.Local).AddTicks(5554));
+                        .HasDefaultValue(new DateTime(2025, 5, 12, 10, 2, 10, 905, DateTimeKind.Local).AddTicks(6397));
 
                     b.Property<bool>("IsRemoved")
                         .ValueGeneratedOnAdd()
@@ -260,7 +260,7 @@ namespace Persistence.Migrations
                     b.Property<DateTime>("InsertTime")
                         .ValueGeneratedOnAdd()
                         .HasColumnType("datetime2")
-                        .HasDefaultValue(new DateTime(2025, 5, 12, 9, 46, 25, 597, DateTimeKind.Local).AddTicks(8211));
+                        .HasDefaultValue(new DateTime(2025, 5, 12, 10, 2, 10, 905, DateTimeKind.Local).AddTicks(9053));
 
                     b.Property<bool>("IsRemoved")
                         .ValueGeneratedOnAdd()
