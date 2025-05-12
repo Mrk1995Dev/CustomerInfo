@@ -6,6 +6,8 @@ using Microsoft.EntityFrameworkCore;
 using Persistence.Configurations.Location;
 using Persistence.Configurations.User;
 using Persistence.DataSeed;
+using System.Linq.Expressions;
+using System.Reflection.Emit;
 
 namespace Persistence.Context
 {
@@ -22,7 +24,6 @@ namespace Persistence.Context
 
         protected override void OnModelCreating(ModelBuilder builder)
         {
-
             #region Seed Data
             builder.Entity<City>().HasData(CitySeedData.GetCities());
             #endregion
@@ -40,6 +41,10 @@ namespace Persistence.Context
                     builder.Entity(entityType.Name).Property<int?>("RemovedBy");
                 }
             }
+
+            #region Global Query Filters
+            builder.Entity<Customer>().HasQueryFilter(cu => EF.Property<bool>(cu, "IsRemoved") == false);
+            #endregion
 
             #region Entities Configuration
             builder.ApplyConfiguration(new CustomerConfiguration());

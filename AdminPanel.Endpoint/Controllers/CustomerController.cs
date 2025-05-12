@@ -38,6 +38,7 @@ namespace AdminPanel.Endpoint.Controllers
         [HttpPut("edit")]
         public async Task<IActionResult> UpdateCustomer([FromBody] UpdateCustomerInfoDto updateCustomer)
         {
+            if (!ModelState.IsValid) return BadRequest("اطلاعات مربوطه ناقص می باشد.");
             var data = await customerManagmentService.UpdateCustomerInfo(updateCustomer);
             if (data.IsSuccess) return Ok(data);
 
