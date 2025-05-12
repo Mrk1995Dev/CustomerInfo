@@ -5,6 +5,7 @@ using Domain.Users;
 using Microsoft.EntityFrameworkCore;
 using Persistence.Configurations.Location;
 using Persistence.Configurations.User;
+using Persistence.DataSeed;
 
 namespace Persistence.Context
 {
@@ -21,6 +22,11 @@ namespace Persistence.Context
 
         protected override void OnModelCreating(ModelBuilder builder)
         {
+
+            #region Seed Data
+            builder.Entity<City>().HasData(CitySeedData.GetCities());
+            #endregion
+
             foreach (var entityType in builder.Model.GetEntityTypes())
             {
                 if (entityType.ClrType.GetCustomAttributes(typeof(AuditableAttribute), true).Length > 0)
