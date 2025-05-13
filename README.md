@@ -6,3 +6,5 @@
 
 4 - Set As StartUp Project را بر روی Adminpanel.Endpoint قرار بدهید - swagger اجرا خواهد شد.
 
+  5 - پس از اجرای پروژه BackEnd لطفا از لینک https://github.com/Mrk1995Dev/FrontEndCodeChallenge/tree/develop پروژه فرانت را کلون بگیرید و ران کنید.
+
